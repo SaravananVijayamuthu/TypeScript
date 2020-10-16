@@ -4,8 +4,8 @@ const num2Ele = document.getElementById('n2') as HTMLInputElement;
 const buttonEle = document.querySelector('button');
 
 //General Check
-function add(num1: number, num2: number){
-    return num1+num2;
+function add(n1: number, n2: number){
+    return n1+n2;
 }
 
 buttonEle.addEventListener('click',() => {
