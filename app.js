@@ -3,8 +3,8 @@ var num1Ele = document.getElementById('n1');
 var num2Ele = document.getElementById('n2');
 var buttonEle = document.querySelector('button');
 //General Check
-function add(num1, num2) {
-    return num1 + num2;
+function add(n1, n2) {
+    return n1 + n2;
 }
 buttonEle.addEventListener('click', function () {
     var n1 = num1Ele.value;
