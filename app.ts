@@ -1,7 +1,7 @@
 //getting it from index.html
 const num1Ele = document.getElementById('n1') as HTMLInputElement;
 const num2Ele = document.getElementById('n2') as HTMLInputElement;
-const buttonEle = document.querySelector('button');
+const buttonEle = document.querySelector('button')!; // -> adding '!' bcoz of null type err in ts
 
 // General Check
 function add(n1: number, n2: number){
