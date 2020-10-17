@@ -4,7 +4,7 @@ const num2Ele = document.getElementById('n2') as HTMLInputElement;
 const buttonEle = document.querySelector('button')!; // -> adding '!' bcoz of null type err in ts
 
 //General Check
-function add(n1: number | string, n2: number | string){         //-> '|' union
+function add(n1: NumberOrString, n2: NumberOrString){         //-> '|' union
     if(typeof n1 === 'number' && typeof n2 === 'number')
         return n1+n2;
     else if(typeof  n1 === 'string' && typeof  n2 === 'string')
@@ -17,8 +17,16 @@ function add(n1: number | string, n2: number | string){         //-> '|' union
 const numArr: number[] = [];
 const textArr: string[]  = [];
 
+//Type alias
+type NumberOrString = number | string;
+type Result = {val:number; timestamp:Date};
+interface  ResultObj {
+    val: number;
+    timestamp: Date;
+}
+
 //Obj
-function PrintResult(resultObj: {val:number; timestamp:Date})
+function PrintResult(resultObj: ResultObj)
 {
     console.log(resultObj.val);
 }
