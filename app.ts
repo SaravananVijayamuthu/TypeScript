@@ -4,7 +4,7 @@ const num2Ele = document.getElementById('n2') as HTMLInputElement;
 const buttonEle = document.querySelector('button')!; // -> adding '!' bcoz of null type err in ts
 
 // General Check
-function add(n1: number | string, n2: number | string){
+function add(n1: number | string, n2: number | string){         //-> '|' union
     if(typeof n1 === 'number' && typeof n2 === 'number')
         return n1+n2;
     else if(typeof  n1 === 'string' && typeof  n2 === 'string')
