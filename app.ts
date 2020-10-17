@@ -3,7 +3,7 @@ const num1Ele = document.getElementById('n1') as HTMLInputElement;
 const num2Ele = document.getElementById('n2') as HTMLInputElement;
 const buttonEle = document.querySelector('button')!; // -> adding '!' bcoz of null type err in ts
 
-// General Check
+//General Check
 function add(n1: number | string, n2: number | string){         //-> '|' union
     if(typeof n1 === 'number' && typeof n2 === 'number')
         return n1+n2;
@@ -13,6 +13,12 @@ function add(n1: number | string, n2: number | string){         //-> '|' union
         return +n1 + +n2;
 }
 
+//Obj
+function PrintResult(resultObj: {val:number; timestamp:Date})
+{
+    console.log(resultObj.val);
+}
+
 buttonEle.addEventListener('click',() => {
     const n1 = num1Ele.value;
     const n2 = num2Ele.value;
@@ -20,6 +26,7 @@ buttonEle.addEventListener('click',() => {
     const StringResult = add(n1, n2);
     console.log(result);
     console.log(StringResult);
+    // PrintResult({val: result as number, timestamp: new Date()});
 });
 // console.log(add(1,5));
 // console.log(add('1','5')); -> String
