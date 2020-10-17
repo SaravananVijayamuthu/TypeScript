@@ -12,6 +12,9 @@ function add(n1, n2) {
     else
         return +n1 + +n2;
 }
+//Array
+var numArr = [];
+var textArr = [];
 //Obj
 function PrintResult(resultObj) {
     console.log(resultObj.val);
@@ -21,9 +24,13 @@ buttonEle.addEventListener('click', function () {
     var n2 = num2Ele.value;
     var result = add(+n1, +n2); //using + since .value is string we r forcing to accept number through '+' 
     var StringResult = add(n1, n2);
-    console.log(result);
-    console.log(StringResult);
-    // PrintResult({val: result as number, timestamp: new Date()});
+    // console.log(result);
+    // console.log(StringResult);
+    numArr.push(result);
+    textArr.push(StringResult);
+    PrintResult({ val: result, timestamp: new Date() });
+    console.log(numArr);
+    console.log(textArr);
 });
 // console.log(add(1,5));
 // console.log(add('1','5')); -> String

@@ -13,6 +13,10 @@ function add(n1: number | string, n2: number | string){         //-> '|' union
         return +n1 + +n2;
 }
 
+//Array
+const numArr: number[] = [];
+const textArr: string[]  = [];
+
 //Obj
 function PrintResult(resultObj: {val:number; timestamp:Date})
 {
@@ -24,9 +28,13 @@ buttonEle.addEventListener('click',() => {
     const n2 = num2Ele.value;
     const result = add(+n1, +n2);   //using + since .value is string we r forcing to accept number through '+' 
     const StringResult = add(n1, n2);
-    console.log(result);
-    console.log(StringResult);
-    // PrintResult({val: result as number, timestamp: new Date()});
+    // console.log(result);
+    // console.log(StringResult);
+    numArr.push(result as number);
+    textArr.push(StringResult as string);
+    PrintResult({val: result as number, timestamp: new Date()});
+    console.log(numArr);
+    console.log(textArr);
 });
 // console.log(add(1,5));
 // console.log(add('1','5')); -> String
