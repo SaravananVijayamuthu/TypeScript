@@ -1,7 +1,8 @@
+"use strict";
 //getting it from index.html
 var num1Ele = document.getElementById('n1');
 var num2Ele = document.getElementById('n2');
-var buttonEle = document.querySelector('button');
+var buttonEle = document.querySelector('button'); // -> adding '!' bcoz of null type err in ts
 // General Check
 function add(n1, n2) {
     return n1 + n2;
