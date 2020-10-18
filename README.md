@@ -1,6 +1,6 @@
 # TypeScript(General)
 <p>  
-<img src="https://github.com/c/devicon/blob/master/icons/html5/html5-original.svg" alt="html5" width="40" height="40"/>
+<img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" alt="html5" width="40" height="40"/>
 <img src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/>
 <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/>
 </p> 
