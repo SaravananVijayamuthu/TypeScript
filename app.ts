@@ -48,14 +48,14 @@ buttonEle.addEventListener('click',() => {
 // console.log(add('1','5')); -> String
 
 //promise
-const myPromise = new Promise((resolve, reject) => {  
+const myPromise = new Promise<string>((resolve, reject) => {  //Generic type can be used only in obj
     setTimeout(() => {
         resolve("All Good!!");
     }, 2000);
 });
 
 myPromise.then((result) =>{
-    console.log(result);
+    console.log(result.split("w"));
 });
 
 

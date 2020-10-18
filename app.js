@@ -41,7 +41,7 @@ const myPromise = new Promise((resolve, reject) => {
     }, 2000);
 });
 myPromise.then((result) => {
-    console.log(result);
+    console.log(result.split("w"));
 });
 /*Core Data Types
 number -> 1,5.3,-10
