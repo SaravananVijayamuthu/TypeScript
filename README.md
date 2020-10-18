@@ -34,6 +34,7 @@ Use the package manager [npm](https://www.npmjs.com/) to install.
 
 ```bash
 npm install -g typescript
+tsc --init //config file
 ```
 
 ## Usage
