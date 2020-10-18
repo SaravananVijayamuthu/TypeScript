@@ -55,7 +55,7 @@ const myPromise = new Promise<string>((resolve, reject) => {  //Generic type can
 });
 
 myPromise.then((result) =>{
-    console.log(result.split("w"));
+    console.log(result.split("G"));
 });
 
 
