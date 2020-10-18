@@ -1,8 +1,8 @@
 "use strict";
 //getting it from index.html
-var num1Ele = document.getElementById('n1');
-var num2Ele = document.getElementById('n2');
-var buttonEle = document.querySelector('button'); // -> adding '!' bcoz of null type err in ts
+const num1Ele = document.getElementById('n1');
+const num2Ele = document.getElementById('n2');
+const buttonEle = document.querySelector('button'); // -> adding '!' bcoz of null type err in ts
 //General Check
 function add(n1, n2) {
     if (typeof n1 === 'number' && typeof n2 === 'number')
@@ -13,17 +13,17 @@ function add(n1, n2) {
         return +n1 + +n2;
 }
 //Array
-var numArr = [];
-var textArr = [];
+const numArr = [];
+const textArr = [];
 //Obj
 function PrintResult(resultObj) {
     console.log(resultObj.val);
 }
-buttonEle.addEventListener('click', function () {
-    var n1 = num1Ele.value;
-    var n2 = num2Ele.value;
-    var result = add(+n1, +n2); //using + since .value is string we r forcing to accept number through '+' 
-    var StringResult = add(n1, n2);
+buttonEle.addEventListener('click', () => {
+    const n1 = num1Ele.value;
+    const n2 = num2Ele.value;
+    const result = add(+n1, +n2); //using + since .value is string we r forcing to accept number through '+' 
+    const StringResult = add(n1, n2);
     // console.log(result);
     // console.log(StringResult);
     numArr.push(result);
@@ -34,6 +34,15 @@ buttonEle.addEventListener('click', function () {
 });
 // console.log(add(1,5));
 // console.log(add('1','5')); -> String
+//promise
+const myPromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("All Good!!");
+    }, 2000);
+});
+myPromise.then((result) => {
+    console.log(result);
+});
 /*Core Data Types
 number -> 1,5.3,-10
 string -> 'Hi', "Hi", `Hi`

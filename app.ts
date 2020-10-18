@@ -14,8 +14,8 @@ function add(n1: NumberOrString, n2: NumberOrString){         //-> '|' union
 }
 
 //Array
-const numArr: number[] = [];
-const textArr: string[]  = [];
+const numArr: Array<number> = [];
+const textArr: Array<string> = [];
 
 //Type alias
 type NumberOrString = number | string;
@@ -47,7 +47,16 @@ buttonEle.addEventListener('click',() => {
 // console.log(add(1,5));
 // console.log(add('1','5')); -> String
 
+//promise
+const myPromise = new Promise((resolve, reject) => {  
+    setTimeout(() => {
+        resolve("All Good!!");
+    }, 2000);
+});
 
+myPromise.then((result) =>{
+    console.log(result);
+});
 
 
 
